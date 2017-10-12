@@ -20,7 +20,7 @@
             $queryTypeFilter="";
     }
     
-    $query="SELECT * FROM notifications WHERE (target_user_id='$user_id' $queryTypeFilter)";
+    $query="SELECT * FROM notifications WHERE (target_user_id='$user_id' $queryTypeFilter) ORDER BY notification_id DESC";
     $r= mysqli_query($dbc, $query);
     
     $result_array=array();
